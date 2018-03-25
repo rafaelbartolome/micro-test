@@ -1,7 +1,7 @@
 # vessel-service/Dockerfile
 FROM golang:1.9.0 as builder
 
-WORKDIR /go/src/micro-test/vessel-service
+WORKDIR /go/src/github.com/rafaelbartolome/micro-test/vessel-service
 
 COPY . .
 
@@ -16,6 +16,6 @@ RUN apk --no-cache add ca-certificates
 
 RUN mkdir /app
 WORKDIR /app
-COPY --from=builder /go/src/micro-test/vessel-service/vessel-service .
+COPY --from=builder /go/src/github.com/rafaelbartolome/micro-test/vessel-service/vessel-service .
 
 CMD ["./vessel-service"]

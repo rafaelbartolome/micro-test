@@ -6,8 +6,9 @@ import (
 	"fmt"
 	"log"
 
-	pb "micro-test/consignment-service/proto/consignment"
-	vesselProto "micro-test/vessel-service/proto/vessel"
+	vesselProto "github.com/rafaelbartolome/micro-test/vessel-service/proto/vessel"
+
+	pb "github.com/rafaelbartolome/micro-test/consignment-service/proto/consignment"
 
 	micro "github.com/micro/go-micro"
 	"golang.org/x/net/context"

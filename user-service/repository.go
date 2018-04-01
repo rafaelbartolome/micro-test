@@ -2,8 +2,8 @@
 package main
 
 import (
-	pb "github.com/rafaelbartolome/micro-test/user-service/proto/user"
 	"github.com/jinzhu/gorm"
+	pb "github.com/rafaelbartolome/micro-test/user-service/proto/user"
 )
 
 type Repository interface {
@@ -45,4 +45,5 @@ func (repo *UserRepository) Create(user *pb.User) error {
 	if err := repo.db.Create(user).Error; err != nil {
 		return err
 	}
+	return nil
 }
